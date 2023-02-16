@@ -1,5 +1,5 @@
 {
-  "name": "donaypayapi-v2",
+  "name": "mainstack-interview",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Taycode/DonayPayAPI-v2.git"
+    "url": "git+https://github.com/Taycode/mainstack-interview.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Taycode/DonayPayAPI-v2/issues"
+    "url": "https://github.com/Taycode/mainstack-interview/issues"
   },
-  "homepage": "https://github.com/Taycode/DonayPayAPI-v2#readme",
+  "homepage": "https://github.com/Taycode/mainstack-interview#readme",
   "dependencies": {
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
