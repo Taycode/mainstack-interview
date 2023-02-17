@@ -7,6 +7,8 @@ const productService = new ProductService();
 
 export class ProductController {
   async createProduct(req: Request, res: Response) {
+    // #swagger.tags = ['Product']
+    // #swagger.description = 'Create product'
     const payload: CreateProductDto = req.body;
     const newProduct = await productService.createProduct(payload);
     return res.status(201).json({
@@ -16,6 +18,8 @@ export class ProductController {
     });
   }
   async fetchAllProducts(req: Request, res: Response) {
+    // #swagger.tags = ['Product']
+    // #swagger.description = 'Fetch All products'
     const products = await productService.fetchAllProducts();
     return res.status(200).json({
       status: true,
@@ -24,6 +28,9 @@ export class ProductController {
     });
   }
   async fetchOneProduct(req: Request, res: Response) {
+    // #swagger.tags = ['Product']
+    // #swagger.description = 'Fetch All products'
+    // #swagger.parameters['productId'] = { description: 'Id of the product' }
     const { productId } = req.params;
     const fetchedProduct = await productService.fetchOneProduct(productId);
     return res.status(200).json({
@@ -33,6 +40,9 @@ export class ProductController {
     });
   }
   async deleteProduct(req: Request, res: Response) {
+    // #swagger.tags = ['Product']
+    // #swagger.description = 'Fetch All products'
+    // #swagger.parameters['productId'] = { description: 'Id of the product' }
     const { productId } = req.params;
     const deletedProduct = await productService.deleteProduct(productId);
     return res.status(200).json({
@@ -42,6 +52,9 @@ export class ProductController {
     });
   }
   async updateProduct(req: Request, res: Response) {
+    // #swagger.tags = ['Product']
+    // #swagger.description = 'Fetch All products'
+    // #swagger.parameters['productId'] = { description: 'Id of the product' }
     const { productId } = req.params;
     const payload: UpdateProductDto = req.body;
     const updatedProduct = await productService.updateProduct(

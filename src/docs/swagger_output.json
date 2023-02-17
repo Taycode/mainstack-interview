@@ -1,0 +1,101 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "definitions": {
+    "AddProduct": {
+      "name": "gala",
+      "price": 50
+    }
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/product/fetch": {
+      "get": {
+        "description": "Fetch all products",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/product/fetch/{productId}": {
+      "get": {
+        "description": "Fetch one product",
+        "parameters": [{
+          "name": "productId",
+          "description": "id of product",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/product/create": {
+      "post": {
+        "description": "",
+        "parameters": [{
+          "in": "body",
+          "description": "create product",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/AddProduct"
+          }
+        }],
+        "responses": {}
+      }
+    },
+    "/product/update/{productId}": {
+      "patch": {
+        "description": "",
+        "parameters": [{
+          "name": "productId",
+          "description": "id of product",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/product/delete/{productId}": {
+      "delete": {
+        "description": "",
+        "parameters": [{
+          "name": "productId",
+          "description": "id of product",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
