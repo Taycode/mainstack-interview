@@ -1,8 +1,8 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import AppRoute from './routes';
-import Docs from './docs';
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
+import AppRoute from "./routes";
+import Docs from "./docs";
 
 export default class App {
   static async boot() {

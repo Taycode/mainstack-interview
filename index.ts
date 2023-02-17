@@ -1,6 +1,6 @@
-import * as http from 'http';
-import App from './src/app';
-import BaseConfig from './src/config';
+import * as http from "http";
+import App from "./src/app";
+import BaseConfig from "./src/config";
 
 const { PORT } = BaseConfig;
 
@@ -12,5 +12,6 @@ const Server = {
   },
 };
 
-Server.start()
-  .then(() => process.stdout.write(`Listening to server on http://localhost:${PORT}`));
+Server.start().then(() =>
+  process.stdout.write(`Listening to server on http://localhost:${PORT}`)
+);

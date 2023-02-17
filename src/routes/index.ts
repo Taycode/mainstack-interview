@@ -1,8 +1,8 @@
-import { Express, Request, Response } from 'express';
+import { Express, Request, Response } from "express";
 
 const Route = (app: Express) => {
-  app.get('/', async (req: Request, res: Response) => {
-    res.send('Hello World');
+  app.get("/", async (req: Request, res: Response) => {
+    res.send("Hello World");
   });
   return app;
 };
